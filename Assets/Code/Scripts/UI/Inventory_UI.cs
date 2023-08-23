@@ -54,9 +54,4 @@ public class Inventory_UI : MonoBehaviour
         currentItems[item].SetItem(null);
         currentItems.Remove(item);
     }
-
-    private void OnInventory()
-    {
-        gameObject.SetActive(!gameObject.activeSelf);
-    }
 }
