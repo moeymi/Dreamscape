@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7addb4d730af0c3458e2fdc7e9407657, type: 3}
+  m_Name: Head_1
+  m_EditorClassIdentifier: 
+  itemName: Head
+  itemSprite: {fileID: 0}
+  partAnimationID: 1
+  partType: Head
+  partAnimationClips:
+  - {fileID: 7400000, guid: 46d92a4cc14a12e4caafc2fe988e5126, type: 2}
+  - {fileID: 7400000, guid: c6c8e698f575c8d4bbf85ab1aebfc194, type: 2}
+  - {fileID: 7400000, guid: f2ba71e227f9518408ff55c678253ae7, type: 2}
+  - {fileID: 7400000, guid: a9766578f9e2ca244864bd9816aae3f5, type: 2}
+  - {fileID: 7400000, guid: c0c1e2a913805434095a40bd45321391, type: 2}
+  - {fileID: 7400000, guid: c251106da735df0448dbdc0e98bbb540, type: 2}
+  - {fileID: 7400000, guid: 2f24f5336c117f941ac0795908e18cd7, type: 2}
+  - {fileID: 7400000, guid: 0514fa44668ecd04787b7c50dbd99690, type: 2}
