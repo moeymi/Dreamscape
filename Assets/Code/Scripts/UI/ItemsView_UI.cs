@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,14 +10,12 @@ public class ItemsView_UI : MonoBehaviour
     [SerializeField]
     private Slot_UI itemSlotPrefab;
 
-    protected Dictionary<Item_SO, Slot_UI> currentItems;
     protected List<Slot_UI> viewSlots;
 
     protected int maxSize = 20;
 
     protected virtual void Awake()
     {
-        currentItems = new Dictionary<Item_SO, Slot_UI>();
         viewSlots = new List<Slot_UI>();
 
         for (int i = 0; i < maxSize; i++)
@@ -28,6 +27,20 @@ public class ItemsView_UI : MonoBehaviour
         }
     }
 
+    public void SetItems(Item_SO[] items)
+    {
+        int ind = 0;
+        for (ind = 0; ind < Mathf.Min(viewSlots.Count, items.Length); ind++)
+        {
+            viewSlots[ind].SetItem(items[ind]);
+        }
+
+        while (ind < viewSlots.Count)
+        {
+            viewSlots[ind++].SetItem(null);
+        }
+    }
+
     public void AddItem(Item_SO item)
     {
         foreach (var slot in viewSlots)
@@ -35,7 +48,6 @@ public class ItemsView_UI : MonoBehaviour
             if (slot.IsEmpty)
             {
                 slot.SetItem(item);
-                currentItems.Add(item, slot);
                 break;
             }
         }
@@ -43,7 +55,7 @@ public class ItemsView_UI : MonoBehaviour
 
     public void RemoveItem(Item_SO item)
     {
-        currentItems[item].SetItem(null);
-        currentItems.Remove(item);
+        var slot = viewSlots.Find((Slot_UI slot) => item == slot.CurrentItem);
+        slot.SetItem(null);
     }
 }

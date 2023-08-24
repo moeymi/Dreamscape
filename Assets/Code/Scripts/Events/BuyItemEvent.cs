@@ -1,5 +1,5 @@
 using UnityEngine.Events;
 
-public class BuyItemEvent : UnityEvent<Item_SO, float>
+public class BuyItemEvent : UnityEvent<Item_SO, int>
 {
 }

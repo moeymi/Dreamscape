@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Head_3
   m_EditorClassIdentifier: 
   itemName: Head
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 1797898352, guid: 664af40073d582e41bd0c44a05156ca9, type: 3}
   partAnimationID: 3
   partType: Head

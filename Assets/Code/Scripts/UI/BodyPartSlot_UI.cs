@@ -8,7 +8,10 @@ public class BodyPartSlot_UI : InventorySlot_UI
 
     public override void SetHandler(ItemDragHandler newHandler)
     {
-        if(currentHandler.Item != null)
+        if (newHandler.parentSlot.GetType() == typeof(BodyPartSlot_UI))
+            return;
+
+        if (currentHandler.Item != null)
         {
             InventoryManager.Instance.UnequipBodyPart(currentHandler.Item as BodyPart_SO);
         }
@@ -16,6 +19,7 @@ public class BodyPartSlot_UI : InventorySlot_UI
         {
             InventoryManager.Instance.EquipBodyPart(newHandler.Item as BodyPart_SO);
         }
+
 
         base.SetHandler(newHandler);
 

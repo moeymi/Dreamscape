@@ -7,6 +7,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void SetInteractable(Interactable interactable)
     {
+        currentInteractable?.TurnOff();
         currentInteractable = interactable;
     }
 
@@ -14,6 +15,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (currentInteractable == interactable)
         {
+            currentInteractable?.TurnOff();
             currentInteractable = null;
         }
     }

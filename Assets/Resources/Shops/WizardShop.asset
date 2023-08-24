@@ -14,5 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopName: Almighty Wizard Shop
   shopItems:
-  - {fileID: 11400000, guid: 8eafcdb80edf0e248a2f11de37f9fdc4, type: 2}
-  - {fileID: 11400000, guid: 4b4298bf0f1de6e469a51b5d1f9e9ff6, type: 2}
+  - price: 5
+    item: {fileID: 11400000, guid: e3b80b14af051c54eb33d2919deaaab9, type: 2}
+  - price: 7
+    item: {fileID: 11400000, guid: 4b4298bf0f1de6e469a51b5d1f9e9ff6, type: 2}
+  - price: 12
+    item: {fileID: 11400000, guid: 8eafcdb80edf0e248a2f11de37f9fdc4, type: 2}
+  - price: 8
+    item: {fileID: 11400000, guid: dfa1ce0c5bb2bee479f8496230e39d95, type: 2}
+  - price: 3
+    item: {fileID: 11400000, guid: ca6d3400c4ccf3640991c1030d85ccf2, type: 2}

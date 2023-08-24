@@ -12,6 +12,13 @@ public class InventoryManager : Singleton<InventoryManager>
 
     private List<Item_SO> currentItems;
 
+    private int goldAmount = 100;
+
+    public int GoldAmount
+    {
+        get { return goldAmount; }
+    }
+
     public int MaxSize
     {
         get { return maxSize; }
@@ -24,16 +31,35 @@ public class InventoryManager : Singleton<InventoryManager>
     {
         base.Awake();
         currentItems = new List<Item_SO>();
-        EventsPool.Instance.AddListener(typeof(BuyItemEvent), new Action<Item_SO, float>(AddItem));
+        EventsPool.Instance.AddListener(typeof(BuyItemEvent), new Action<Item_SO, int>(BuyItem));
+        EventsPool.Instance.AddListener(typeof(SellItemEvent), new Action<Item_SO, int>(SellItem));
     }
 
-    public void AddItem(Item_SO item, float price)
+    private void BuyItem(Item_SO item, int price)
+    {
+        goldAmount -= price;
+        AddItem(item);
+    }
+
+    private void SellItem(Item_SO item, int price)
+    {
+        goldAmount += price;
+        RemoveItem(item);
+    }
+
+    public void AddItem(Item_SO item)
     {
         currentItems.Add(item);
     }
 
+    public void RemoveItem(Item_SO item)
+    {
+        currentItems.Remove(item);
+    }
+
     public void EquipBodyPart(BodyPart_SO bodyPart)
     {
+        RemoveItem(bodyPart);
         if (bodyPart.partType == "Clothes")
         {
             characterBody.clothesBodyPart = bodyPart;
@@ -48,6 +74,7 @@ public class InventoryManager : Singleton<InventoryManager>
 
     public void UnequipBodyPart(BodyPart_SO bodyPart)
     {
+        AddItem(bodyPart);
         if (bodyPart.partType == "Clothes")
         {
             characterBody.clothesBodyPart = null;

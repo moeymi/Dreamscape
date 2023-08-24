@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 
 public class InventorySlot_UI : Slot_UI, IDropHandler
 {
@@ -15,6 +16,7 @@ public class InventorySlot_UI : Slot_UI, IDropHandler
         currentHandler = newHandler;
         currentHandler.Drop(this);
         currentHandler.SetItem(currentHandler.Item);
+        currentItem = currentHandler.Item;
     }
 
     public override void SetItem(Item_SO item)
@@ -25,6 +27,10 @@ public class InventorySlot_UI : Slot_UI, IDropHandler
 
     public virtual void OnDrop(PointerEventData eventData)
     {
+        if(currentHandler.Item != null)
+        {
+            return;
+        }
         ItemDragHandler newHandler;
         if (eventData.pointerDrag.TryGetComponent(out newHandler))
         {

@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Head_1
   m_EditorClassIdentifier: 
   itemName: Head
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: -402910987, guid: 42ac83a3c650754408a7b38c237b9748, type: 3}
   partAnimationID: 1
   partType: Head
-  partAnimationClips:
-  - {fileID: 7400000, guid: 46d92a4cc14a12e4caafc2fe988e5126, type: 2}
-  - {fileID: 7400000, guid: c6c8e698f575c8d4bbf85ab1aebfc194, type: 2}
-  - {fileID: 7400000, guid: f2ba71e227f9518408ff55c678253ae7, type: 2}
-  - {fileID: 7400000, guid: a9766578f9e2ca244864bd9816aae3f5, type: 2}
-  - {fileID: 7400000, guid: c0c1e2a913805434095a40bd45321391, type: 2}
-  - {fileID: 7400000, guid: c251106da735df0448dbdc0e98bbb540, type: 2}
-  - {fileID: 7400000, guid: 2f24f5336c117f941ac0795908e18cd7, type: 2}
-  - {fileID: 7400000, guid: 0514fa44668ecd04787b7c50dbd99690, type: 2}

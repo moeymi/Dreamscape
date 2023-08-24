@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: Clothes_1
   m_EditorClassIdentifier: 
   itemName: Clothes
-  itemSprite: {fileID: 21300000, guid: 69f8d8d54c17c6547be92609ebaa6efc, type: 3}
+  itemSprite: {fileID: 21300000, guid: 67e95805d2728574eb265110941354cd, type: 3}
   partAnimationID: 1
   partType: Clothes
-  partAnimationClips:
-  - {fileID: 7400000, guid: 04101aea2dbf86d4cbafd2eabbea4f21, type: 2}
-  - {fileID: 7400000, guid: d309ec746226ea7408c40fe8910e98db, type: 2}
-  - {fileID: 7400000, guid: 587b0e6541909ba4a8838a59e894104b, type: 2}
-  - {fileID: 7400000, guid: 8a9bd3363415e3644ac37cd27bac94e4, type: 2}
-  - {fileID: 7400000, guid: 8cde77125b5342b4e90517e067e129f5, type: 2}
-  - {fileID: 7400000, guid: 7e02648876aba0241aa7e45df77bbb58, type: 2}
-  - {fileID: 7400000, guid: 041c4ee940b6b594fa10d27c554dbc7f, type: 2}
-  - {fileID: 7400000, guid: 1e67bff6efc8b4b44920985f0c23786b, type: 2}
