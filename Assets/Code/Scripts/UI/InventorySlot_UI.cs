@@ -1,14 +1,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InventorySlot_UI : MonoBehaviour, IDropHandler
+public class InventorySlot_UI : Slot_UI, IDropHandler
 {
     protected ItemDragHandler currentHandler;
-
-    public bool IsEmpty
-    {
-        get { return currentHandler.Item == null; }
-    }
 
     private void Awake()
     {
@@ -22,8 +17,9 @@ public class InventorySlot_UI : MonoBehaviour, IDropHandler
         currentHandler.SetItem(currentHandler.Item);
     }
 
-    public void SetItem(Item_SO item)
+    public override void SetItem(Item_SO item)
     {
+        currentItem = item;
         currentHandler.SetItem(item);
     }
 

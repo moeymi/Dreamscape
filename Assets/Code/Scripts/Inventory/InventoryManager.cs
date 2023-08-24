@@ -17,6 +17,9 @@ public class InventoryManager : Singleton<InventoryManager>
         get { return maxSize; }
     }
 
+    public List<Item_SO> CurrentItems
+    { get { return currentItems; } }
+
     protected override void Awake()
     {
         base.Awake();

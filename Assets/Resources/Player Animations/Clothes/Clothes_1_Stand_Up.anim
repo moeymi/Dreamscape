@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: bd525f59da13e254fbc30c57f1d02584, type: 2}
+      value: {fileID: -914872271, guid: e7b617241ecf46443a640ddb0b62d951, type: 3}
     attribute: m_Sprite
     path: Clothes
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: bd525f59da13e254fbc30c57f1d02584, type: 2}
+    - {fileID: -914872271, guid: e7b617241ecf46443a640ddb0b62d951, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

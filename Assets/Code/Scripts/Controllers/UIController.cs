@@ -1,16 +1,32 @@
+using System;
 using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    private Inventory_UI inventory;
+    [SerializeField]
+    private InventoryItemsView_UI inventoryPanel;
+
+    [SerializeField]
+    private ShopItemsView_UI shopPanel;
 
     private void Awake()
     {
-        inventory = GetComponentInChildren<Inventory_UI>();
+        inventoryPanel.gameObject.SetActive(false);
+        shopPanel.gameObject.SetActive(false);
+
+        EventsPool.Instance.AddListener(typeof(ShowShopEvent), new Action<Shop_SO>(ShowShop));
+    }
+
+    private void ShowShop(Shop_SO shop)
+    {
+        inventoryPanel.gameObject.SetActive(false);
+        shopPanel.gameObject.SetActive(true);
+
+        shopPanel.Show(shop);
     }
 
     private void OnInventory()
     {
-        inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);
+        inventoryPanel.gameObject.SetActive(!inventoryPanel.gameObject.activeSelf);
     }
 }

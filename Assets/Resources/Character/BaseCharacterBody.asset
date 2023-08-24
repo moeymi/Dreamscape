@@ -12,9 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a21ee394b88014e92d73a57e85269a, type: 3}
   m_Name: BaseCharacterBody
   m_EditorClassIdentifier: 
-  headBodyPart:
-    bodyPartName: Head
-    bodyPart: {fileID: 0}
-  clothesBodyPart:
-    bodyPartName: Clothes
-    bodyPart: {fileID: 0}
+  headBodyPart: {fileID: 0}
+  clothesBodyPart: {fileID: 0}
